@@ -1,0 +1,17 @@
+package io.ismaildrissi.microservicearchitecture.dtos;
+
+import io.ismaildrissi.microservicearchitecture.entities.BankAccount;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Data @AllArgsConstructor
+@NoArgsConstructor @Builder
+public class CustomerResponseDTO {
+    private String id;
+    private String name;
+    private List<BankAccount> accounts;
+}
