@@ -194,7 +194,17 @@ input BankAccountRequestDTO {
 }
 ```
 
-Query Example:
+### GraphQL Query Example
+
+```graphql
+query {
+  customers {
+    id
+  }
+}
+
+```
+
 ![](screenshots/query.png)
 
 ---
@@ -217,6 +227,5 @@ mutation {
 }
 ```
 
-Mutation Example:
-
 ![](screenshots/mutation.png)
+
