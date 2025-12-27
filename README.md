@@ -109,7 +109,6 @@ REST controller:
 Features:
 
 * CRUD operations for bank accounts
-* Customer management
 
 ---
 
@@ -219,4 +218,5 @@ mutation {
 ```
 
 Mutation Example:
+
 ![](screenshots/mutation.png)
