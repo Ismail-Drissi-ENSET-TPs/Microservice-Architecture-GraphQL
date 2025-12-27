@@ -25,20 +25,20 @@ public class MicroserviceArchitectureApplication {
     @Bean
     CommandLineRunner init(BankAccountRepository bankAccountRepository, CustomerRepository customerRepository) {
 
-        Stream.of("Aziz", "Mohammed", "Amina").forEach(name -> {
-            Customer customer = Customer.builder().id(UUID.randomUUID().toString()).name(name).build();
-            customerRepository.save(customer);
-            for (int i = 0; i<5; i++){
-                BankAccount bankAccount = BankAccount.builder().id(UUID.randomUUID().toString()).accountType(Math.random()>0.5?
-                        AccountType.CURRENT_ACCOUNT:AccountType.SAVING_ACCOUNT).createdAt(new Date()).customer(customer).balance(Math.random()).currency("MAD").build();
-                bankAccountRepository.save(bankAccount);
-            }
-        });
 
 
 
 
         return args -> {
+            Stream.of("Aziz", "Mohammed", "Amina").forEach(name -> {
+                Customer customer = Customer.builder().id(UUID.randomUUID().toString()).name(name).build();
+                customerRepository.save(customer);
+                for (int i = 0; i<5; i++){
+                    BankAccount bankAccount = BankAccount.builder().id(UUID.randomUUID().toString()).accountType(Math.random()>0.5?
+                            AccountType.CURRENT_ACCOUNT:AccountType.SAVING_ACCOUNT).createdAt(new Date()).customer(customer).balance(Math.random()).currency("MAD").build();
+                    bankAccountRepository.save(bankAccount);
+                }
+            });
 
         };
     }
