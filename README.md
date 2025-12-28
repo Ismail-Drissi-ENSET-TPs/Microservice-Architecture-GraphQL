@@ -131,6 +131,15 @@ Repositories are automatically exposed using:
 
 * Projections to customize responses
 
+```java
+@Projection(types = {BankAccount.class}, name = "p1")
+public interface AccountProject {
+    public String getId();
+    public AccountType getAccountType();
+    public Double getBalance();
+}
+```
+
 ![](screenshots/projections.png)
 
 ---
@@ -229,5 +238,6 @@ mutation {
 ```
 
 ![](screenshots/mutation.png)
+
 
 
