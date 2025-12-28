@@ -26,30 +26,31 @@ The project demonstrates:
 .
 ├── MicroserviceArchitectureApplication.java
 ├── controllers
-│   ├── AccountGraphQLController.java
-│   └── AccountRestController.java
+│   ├── AccountGraphQLController.java
+│   └── AccountRestController.java
 ├── dtos
-│   ├── BankAccountDTO.java
-│   ├── BankAccountRequestDTO.java
-│   ├── BankAccountResponseDTO.java
-│   ├── CustomerRequestDTO.java
-│   └── CustomerResponseDTO.java
+│   ├── BankAccountDTO.java
+│   ├── BankAccountRequestDTO.java
+│   ├── BankAccountResponseDTO.java
+│   ├── CustomerRequestDTO.java
+│   └── CustomerResponseDTO.java
 ├── entities
-│   ├── BankAccount.java
-│   └── Customer.java
+│   ├── AccountProject.java
+│   ├── BankAccount.java
+│   └── Customer.java
 ├── enums
-│   └── AccountType.java
+│   └── AccountType.java
 ├── mappers
-│   ├── BankAccountMapperI.java
-│   └── CustomerMapperI.java
+│   ├── BankAccountMapperI.java
+│   └── CustomerMapperI.java
 ├── repositories
-│   ├── BankAccountRepository.java
-│   └── CustomerRepository.java
-├── services
-│   ├── BankAccountService.java
-│   ├── BankAccountServiceI.java
-│   ├── CustomerServiceI.java
-│   └── CustomerServiceImpl.java
+│   ├── BankAccountRepository.java
+│   └── CustomerRepository.java
+└── services
+    ├── BankAccountService.java
+    ├── BankAccountServiceI.java
+    ├── CustomerServiceI.java
+    └── CustomerServiceImpl.jav
 ```
 
 ---
@@ -228,4 +229,5 @@ mutation {
 ```
 
 ![](screenshots/mutation.png)
+
 
